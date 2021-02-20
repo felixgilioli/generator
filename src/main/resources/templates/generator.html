@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Gerador de Documentos</title>
+    <link rel="stylesheet" type="text/css" href="${path}/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="${path}/css/index.css" />
+    <link rel="icon" href="${path}/img/portfolio-icon.png">
+</head>
+<body>
+    <header>
+        <h1 class="title">Gerador de Documentos</h1>
+        <h2 class="subtitle">Crie gratuitamente, em poucos minutos, o documento que desejar</h2>
+    </header>
+
+    <main>
+        <section class="container mt-5">
+            <form>
+                <div>
+                    <#list template.inputList as item>
+
+                        <#if item.type == 'TEXT'>
+                            <div class="form-group">
+                                <label for="${item.name}">${item.label}</label>
+                                <input type="text" class="form-control" id="${item.name}" name="${item.name}">
+                            </div>
+                        </#if>
+
+                        <#if item.type == 'EMAIL'>
+                            <div class="form-group">
+                                <label for="${item.name}">${item.label}</label>
+                                <input type="email" class="form-control" id="${item.name}" name="${item.name}">
+                            </div>
+                        </#if>
+
+
+                        <#if item.type == 'TEXTAREA'>
+                            <div class="form-group">
+                                <label for="${item.name}">${item.label}</label>
+                                <textarea class="form-control" id="${item.name}" name="${item.name}"></textarea>
+                            </div>
+                        </#if>
+
+                    </#list>
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownExport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Exportar
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownExport">
+                            <#list template.exportTypeSet as type>
+                                <a class="dropdown-item" href="#">${type.label}</a>
+                            </#list>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="${path}/jquery/jquery.min.js"></script>
+    <script src="${path}/bootstrap/js/popper.min.js"></script>
+    <script src="${path}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${path}/js/generator.js"></script>
+</body>
+</html>
