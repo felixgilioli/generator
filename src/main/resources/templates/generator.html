@@ -22,14 +22,14 @@
                         <#if item.type == 'TEXT'>
                             <div class="form-group">
                                 <label for="${item.name}">${item.label}</label>
-                                <input type="text" class="form-control" id="${item.name}" name="${item.name}">
+                                    <input type="text" class="form-control" id="${item.name}" name="${item.name}" placeholder="${(item.placeholder)!}">
                             </div>
                         </#if>
 
                         <#if item.type == 'EMAIL'>
                             <div class="form-group">
                                 <label for="${item.name}">${item.label}</label>
-                                <input type="email" class="form-control" id="${item.name}" name="${item.name}">
+                                    <input type="email" class="form-control" id="${item.name}" name="${item.name}" placeholder="${(item.placeholder)!}">
                             </div>
                         </#if>
 
@@ -37,7 +37,7 @@
                         <#if item.type == 'TEXTAREA'>
                             <div class="form-group">
                                 <label for="${item.name}">${item.label}</label>
-                                <textarea class="form-control" id="${item.name}" name="${item.name}"></textarea>
+                                    <textarea class="form-control" id="${item.name}" name="${item.name}" placeholder="${(item.placeholder)!}"></textarea>
                             </div>
                         </#if>
 

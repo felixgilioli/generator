@@ -76,6 +76,7 @@ public class GeneratorApplication {
 		InputEntity inputEntity2 = new InputEntity();
 		inputEntity2.setLabel("Email:");
 		inputEntity2.setName("email");
+		inputEntity2.setPlaceholder("email@email.com");
 		inputEntity2.setTemplate(templateEntity1);
 		inputEntity2.setType(InputType.EMAIL);
 		inputEntity2.setOrdem(2);
