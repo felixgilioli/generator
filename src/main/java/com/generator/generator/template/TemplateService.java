@@ -8,8 +8,6 @@ import org.springframework.data.domain.PageRequest;
 
 public interface TemplateService {
 
-    Optional<String> findLocationByTemplateId(UUID templateId);
-
     Page<TemplateEntity> findAllPageable(PageRequest pageRequest);
 
     TemplateEntity save(TemplateEntity templateEntity);

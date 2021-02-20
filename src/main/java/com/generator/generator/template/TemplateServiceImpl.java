@@ -18,12 +18,6 @@ public class TemplateServiceImpl implements TemplateService {
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<String> findLocationByTemplateId(UUID templateId) {
-        return Optional.empty();
-    }
-
-    @Override
-    @Transactional(readOnly = true)
     public Page<TemplateEntity> findAllPageable(PageRequest pageRequest) {
         return this.templateRepository.findAll(pageRequest);
     }

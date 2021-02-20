@@ -15,9 +15,9 @@ public class GeneratorController {
     private GeneratorService generatorService;
 
     @PostMapping
-    public ResponseEntity<String> generate(@RequestBody GeneratorDTO generatorDTO) {
-        final String document = this.generatorService.generate(generatorDTO);
-        return ResponseEntity.ok(document);
+    public ResponseEntity<GeneratorOutput> generate(@RequestBody GeneratorInput generatorInput) {
+        final GeneratorOutput generatorOutput = this.generatorService.generate(generatorInput);
+        return ResponseEntity.ok(generatorOutput);
     }
 
 }
