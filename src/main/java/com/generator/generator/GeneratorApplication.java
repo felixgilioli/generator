@@ -35,35 +35,30 @@ public class GeneratorApplication {
 
 	@PostConstruct
 	public void init() {
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-		dkopsad();
-
 		this.saveTemplateContratoAluguel();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		this.saveTemplateContratoAluguel();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
+		dkopsad();
 	}
 
 	private void dkopsad() {

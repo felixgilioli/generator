@@ -2,13 +2,13 @@
 <head>
     <title>Gerador de Documentos</title>
     <link rel="stylesheet" type="text/css" href="${path}/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="${path}/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="${path}/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="${path}/css/generator.css" />
     <link rel="icon" href="${path}/img/portfolio-icon.png">
 </head>
 <body>
     <header>
-        <h1 class="title">Gerador de Documentos</h1>
-        <h2 class="subtitle">Crie gratuitamente, em poucos minutos, o documento que desejar</h2>
+        <h1 class="title">Preencha os dados abaixo para baixar seu documento</h1>
     </header>
 
     <input type="hidden" name="templateId" id="templateId" value="${template.id}">
@@ -52,7 +52,7 @@
 
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownExport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Exportar
+                            Baixar Documento
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownExport">
                             <#list template.exportTypeSet as type>
