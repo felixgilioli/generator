@@ -4,6 +4,7 @@ public enum InputType {
 
     TEXT("Texto"),
     EMAIL("Email"),
+    NUMBER("Número"),
     TEXTAREA("Textarea");
 
     private final String label;

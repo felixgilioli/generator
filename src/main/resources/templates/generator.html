@@ -22,7 +22,14 @@
                         <#if item.type == 'TEXT'>
                             <div class="form-group">
                                 <label for="${item.name}">${item.label}</label>
-                                    <input type="text" class="form-control" id="${item.name}" name="${item.name}" placeholder="${(item.placeholder)!}">
+                                <input type="text" class="form-control" id="${item.name}" title="${item.title}" name="${item.name}" placeholder="${(item.placeholder)!}">
+                            </div>
+                        </#if>
+
+                        <#if item.type == 'NUMBER'>
+                            <div class="form-group">
+                                <label for="${item.name}">${item.label}</label>
+                                <input type="number" class="form-control" id="${item.name}" name="${item.name}" placeholder="${(item.placeholder)!}">
                             </div>
                         </#if>
 

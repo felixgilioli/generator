@@ -38,11 +38,8 @@ header {
 	font-weight: bold;
 }
 
-.templates img {
-	transition: all .4s ease-in-out;
-}
-.templates .card:hover img {
-	transform: scale(2);
+.templates {
+    max-width: 90% !important;
 }
 
 .templates .card {
