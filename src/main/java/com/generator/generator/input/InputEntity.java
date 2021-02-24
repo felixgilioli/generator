@@ -1,23 +1,14 @@
 package com.generator.generator.input;
 
-import java.io.Serializable;
-import java.util.UUID;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
-
+import com.generator.generator.converter.BooleanNotNullConverter;
 import com.generator.generator.template.TemplateEntity;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -52,5 +43,12 @@ public class InputEntity implements Serializable {
     @ManyToOne(optional = false)
     @JoinColumn(nullable = false)
     private TemplateEntity template;
+
+    /**
+     * Input é obrigatório
+     */
+    @Column
+    @Convert(converter = BooleanNotNullConverter.class)
+    private Boolean required;
 
 }

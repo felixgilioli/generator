@@ -140,6 +140,7 @@ public class GeneratorApplication {
 		input1.setTemplate(templateEntity);
 		input1.setOrdem(1);
 		input1.setTitle(input1.getLabel());
+		input1.setRequired(true);
 		this.inputRepository.save(input1);
 
 		InputEntity input2 = new InputEntity();
@@ -149,6 +150,7 @@ public class GeneratorApplication {
 		input2.setTemplate(templateEntity);
 		input2.setOrdem(2);
 		input2.setTitle(input2.getLabel());
+		input2.setRequired(true);
 		this.inputRepository.save(input2);
 
 		InputEntity input3 = new InputEntity();
@@ -158,6 +160,7 @@ public class GeneratorApplication {
 		input3.setType(InputType.TEXT);
 		input3.setTemplate(templateEntity);
 		input3.setTitle(input3.getLabel());
+		input3.setRequired(true);
 		this.inputRepository.save(input3);
 
 		InputEntity input4 = new InputEntity();
@@ -167,6 +170,7 @@ public class GeneratorApplication {
 		input4.setType(InputType.TEXT);
 		input4.setTemplate(templateEntity);
 		input4.setTitle(input4.getLabel());
+		input4.setRequired(true);
 		this.inputRepository.save(input4);
 
 		InputEntity input5 = new InputEntity();
@@ -176,6 +180,7 @@ public class GeneratorApplication {
 		input5.setType(InputType.TEXT);
 		input5.setTemplate(templateEntity);
 		input5.setTitle(input5.getLabel());
+		input5.setRequired(true);
 		this.inputRepository.save(input5);
 
 		InputEntity input6 = new InputEntity();
