@@ -17,80 +17,88 @@
         <section class="container mt-5">
 
             <form id="form" onsubmit="generate(event)">
-                <div>
-                    <#list template.inputList as item>
 
-                        <#if item.type == 'TEXT'>
-                            <div class="form-group">
-                                <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
-                                <input type="text" class="form-control"
-                                       id="${item.name}"
-                                       title="${item.title}"
-                                       <#if item.required>required</#if>
-                                       name="${item.name}"
-                                       placeholder="${(item.placeholder)!}">
-                            </div>
-                        </#if>
+                <#list template.inputGroupList as group>
+                    <fieldset class="border p-2 mb-4">
+                        <legend  class="w-auto">${group.legend}</legend>
 
-                        <#if item.type == 'NUMBER'>
-                            <div class="form-group">
-                                <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
-                                <input type="number"
-                                       class="form-control"
-                                       id="${item.name}"
-                                       name="${item.name}"
-                                       <#if item.required>required</#if>
-                                       placeholder="${(item.placeholder)!}">
-                            </div>
-                        </#if>
+                        <div>
+                            <#list group.inputList as item>
 
-                        <#if item.type == 'EMAIL'>
-                            <div class="form-group">
-                                <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
-                                    <input type="email"
-                                           class="form-control"
-                                           id="${item.name}"
-                                           <#if item.required>required</#if>
-                                           name="${item.name}"
-                                           placeholder="${(item.placeholder)!}">
-                            </div>
-                        </#if>
+                                <#if item.type == 'TEXT'>
+                                    <div class="form-group">
+                                        <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
+                                        <input type="text" class="form-control"
+                                               id="${item.name}"
+                                               title="${item.title}"
+                                               <#if item.required>required</#if>
+                                               name="${item.name}"
+                                               placeholder="${(item.placeholder)!}">
+                                    </div>
+                                </#if>
+
+                                <#if item.type == 'NUMBER'>
+                                    <div class="form-group">
+                                        <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
+                                        <input type="number"
+                                               class="form-control"
+                                               id="${item.name}"
+                                               name="${item.name}"
+                                               <#if item.required>required</#if>
+                                               placeholder="${(item.placeholder)!}">
+                                    </div>
+                                </#if>
+
+                                <#if item.type == 'EMAIL'>
+                                    <div class="form-group">
+                                        <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
+                                            <input type="email"
+                                                   class="form-control"
+                                                   id="${item.name}"
+                                                   <#if item.required>required</#if>
+                                                   name="${item.name}"
+                                                   placeholder="${(item.placeholder)!}">
+                                    </div>
+                                </#if>
 
 
-                        <#if item.type == 'TEXTAREA'>
-                            <div class="form-group">
-                                <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
-                                    <textarea class="form-control"
-                                              id="${item.name}"
-                                              name="${item.name}"
-                                              <#if item.required>required</#if>
-                                              placeholder="${(item.placeholder)!}"></textarea>
-                            </div>
-                        </#if>
+                                <#if item.type == 'TEXTAREA'>
+                                    <div class="form-group">
+                                        <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
+                                            <textarea class="form-control"
+                                                      id="${item.name}"
+                                                      name="${item.name}"
+                                                      <#if item.required>required</#if>
+                                                      placeholder="${(item.placeholder)!}"></textarea>
+                                    </div>
+                                </#if>
 
-                    </#list>
-
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle"
-                                type="button"
-                                id="dropdownExport"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false">
-                            Baixar Documento
-                        </button>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownExport">
-                            <#list template.exportTypeSet as type>
-                                <input type="submit"
-                                       class="dropdown-item"
-                                       value="${type.label}"
-                                       onclick="typeToExport = '${type}'">
                             </#list>
-                        </div>
-                    </div>
 
+                        </div>
+                    </fieldset>
+                </#list>
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            id="dropdownExport"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        Baixar Documento
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownExport">
+                        <#list template.exportTypeSet as type>
+                            <input type="submit"
+                                   class="dropdown-item"
+                                   value="${type.label}"
+                                   onclick="typeToExport = '${type}'">
+                        </#list>
+                    </div>
                 </div>
+
             </form>
 
         </section>

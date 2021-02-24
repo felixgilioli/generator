@@ -18,6 +18,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import com.generator.generator.inputgroup.InputGroupEntity;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.generator.generator.category.CategoryEntity;
@@ -58,6 +59,6 @@ public class TemplateEntity implements Serializable {
 
     @OrderBy("ordem ASC")
     @OneToMany(mappedBy = "template")
-    private List<InputEntity> inputList;
+    private List<InputGroupEntity> inputGroupList;
 
 }

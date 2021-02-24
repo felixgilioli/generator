@@ -1,6 +1,7 @@
 package com.generator.generator.input;
 
 import com.generator.generator.converter.BooleanNotNullConverter;
+import com.generator.generator.inputgroup.InputGroupEntity;
 import com.generator.generator.template.TemplateEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -42,7 +43,7 @@ public class InputEntity implements Serializable {
 
     @ManyToOne(optional = false)
     @JoinColumn(nullable = false)
-    private TemplateEntity template;
+    private InputGroupEntity inputGroup;
 
     /**
      * Input é obrigatório
