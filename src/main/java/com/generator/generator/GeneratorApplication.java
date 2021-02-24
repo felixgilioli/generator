@@ -73,7 +73,7 @@ public class GeneratorApplication {
 		templateEntity1.setTitle("Currículo Formal");
 		templateEntity1.setDescription("Currículo em um formato mais formal.");
 		templateEntity1.setImgLocation("https://binaries.templates.cdn.office.net/support/templates/pt-br/lw00002110_quantized.png");
-		templateEntity1.setLocation("/templates/template01.html");
+		templateEntity1.setLocation("/templates/template01.ftl");
 		templateEntity1.setExportTypeSet(Set.of(ExportType.TEXT, ExportType.HTML, ExportType.PDF));
 		templateEntity1 = this.templateService.save(templateEntity1);
 
@@ -129,7 +129,7 @@ public class GeneratorApplication {
 
 		TemplateEntity templateEntity = new TemplateEntity();
 		templateEntity.setExportTypeSet(Set.of(ExportType.HTML, ExportType.PDF));
-		templateEntity.setLocation("/templates/template-contrato-aluguel.html");
+		templateEntity.setLocation("/templates/template-contrato-aluguel.ftl");
 		templateEntity.setCategory(categoryEntity);
 		templateEntity.setTitle("Contrato de aluguel");
 		templateEntity.setDescription("Contrato de aluguel de imóvel com fiador e 2 testemunhas");
@@ -147,7 +147,8 @@ public class GeneratorApplication {
 		InputEntity input2 = new InputEntity();
 		input2.setName("cpfLocador");
 		input2.setLabel("CPF do Locador");
-		input2.setType(InputType.TEXT);
+		input2.setType(InputType.MASK);
+		input2.setMask("000.000.000-00");
 		input2.setOrdem(2);
 		input2.setTitle(input2.getLabel());
 		input2.setRequired(true);
@@ -155,8 +156,9 @@ public class GeneratorApplication {
 		InputEntity input3 = new InputEntity();
 		input3.setName("identidadeLocador");
 		input3.setLabel("RG do Locador");
+		input3.setMask("00.000.000-0");
 		input3.setOrdem(3);
-		input3.setType(InputType.TEXT);
+		input3.setType(InputType.MASK);
 		input3.setTitle(input3.getLabel());
 		input3.setRequired(true);
 

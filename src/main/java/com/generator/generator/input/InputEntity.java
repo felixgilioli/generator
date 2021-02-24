@@ -52,4 +52,10 @@ public class InputEntity implements Serializable {
     @Convert(converter = BooleanNotNullConverter.class)
     private Boolean required;
 
+    /**
+     * Máscara do input
+     */
+    @Column
+    private String mask;
+
 }
