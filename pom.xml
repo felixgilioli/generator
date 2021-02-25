@@ -15,6 +15,7 @@
 	<description>Projeto que permite a geração de arquivos/imagens a partir de um template.</description>
 	<properties>
 		<java.version>15</java.version>
+		<openhtml.version>1.0.4</openhtml.version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -31,6 +32,27 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<!-- ALWAYS required -->
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-core</artifactId>
+			<version>${openhtml.version}</version>
+		</dependency>
+
+		<dependency>
+			<!-- Required for PDF output. -->
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-pdfbox</artifactId>
+			<version>${openhtml.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.11</version>
 		</dependency>
 
 		<!-- Dependência responsável por fazer com que o FreeMarker suporte os novos objetos de datas disponíveis no Java 8 -->

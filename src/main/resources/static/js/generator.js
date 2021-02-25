@@ -25,7 +25,12 @@ function generate(event) {
     })
     .then(response => response.json())
     .then(response => {
-        const blob = new Blob([response.file], {type : response.blobType});
+        let blob;
+        if (response.blobType === "application/pdf") {
+            blob = b64toBlob(response.file, response.blobType);
+        } else {
+            blob = new Blob([response.file], {type : response.blobType});
+        }
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -47,4 +52,28 @@ function getFormData($form){
     });
 
     return indexed_array;
+}
+
+function b64toBlob(b64Data, contentType) {
+    contentType = contentType || '';
+    let sliceSize = 512;
+    b64Data = b64Data.replace(/^[^,]+,/, '');
+    b64Data = b64Data.replace(/\s/g, '');
+    let byteCharacters = window.atob(b64Data);
+    let byteArrays = [];
+
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+        let slice = byteCharacters.slice(offset, offset + sliceSize);
+
+        let byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        let byteArray = new Uint8Array(byteNumbers);
+
+        byteArrays.push(byteArray);
+    }
+
+    return new Blob(byteArrays, {type: contentType});
 }

@@ -1,30 +1,19 @@
 package com.generator.generator.template;
 
+import com.generator.generator.generator.engine.GeneratorEngine;
+import com.generator.generator.generator.engine.HtmlGenerator;
+import com.generator.generator.generator.engine.PdfGenerator;
+import com.generator.generator.generator.engine.TextGenerator;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
 public enum ExportType {
-    HTML("HTML", "html", "text/html"),
-    TEXT("Texto", "txt", "text/plain"),
-    PDF("PDF", "pdf", "application/pdf"),
-    PNG("PNG", "png", "image/png");
+    HTML(new HtmlGenerator()),
+    TEXT(new TextGenerator()),
+    PDF(new PdfGenerator());
 
-    private final String label;
-    private final String extension;
-    private final String blobType;
+    @Getter
+    private final GeneratorEngine engine;
 
-    ExportType(String label, String extension, String blobType) {
-        this.label = label;
-        this.extension = extension;
-        this.blobType = blobType;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public String getExtension() {
-        return extension;
-    }
-
-    public String getBlobType() {
-        return blobType;
-    }
 }

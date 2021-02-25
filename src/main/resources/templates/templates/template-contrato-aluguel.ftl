@@ -1,11 +1,11 @@
 <html>
 <head>
     <title>Contrato de aluguel</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
 </head>
 <body>
 <div id="content">
-    <p align="center" style="text-align: center;"><b>LOCAÇÃO RESIDENCIAL</b>
+    <p align="center" style="text-align: center;"><b>LOCAÇÃO RESIDENCIAL</b></p>
     <p style="text-align: justify;"><b>${nomeLocador}</b>, <b>${cpfLocador}</b>, <b>${identidadeLocador}</b> <b>${enderecoLocador}, </b>doravante denominado <b>LOCADOR;</b> <b>${nomeLocatario}, ${cpfLocatario}, ${identidadeLocatario}, ${enderecoLocatario}</b>,
         doravante denominado <b>LOCATÁRIO</b>, celebram o presente contrato de locação
         residencial, com as cláusulas e condições seguintes: </p>
@@ -145,7 +145,7 @@
         acordo com o disposto neste instrumento particular, assinam-no na presença das
         duas testemunhas abaixo, em ....... vias de igual teor e forma, destinando-se
         uma via para cada uma das partes. </p>
-    <p style="text-align: justify;">Local e Data:
+    <p style="text-align: justify;">Local e Data:</p>
     <p style="text-align: justify;"></p>
     <table border="0" cellspacing="0" cellpadding="0" style="text-align: justify; border-collapse: collapse;">
         <tbody>
@@ -164,18 +164,20 @@
         </tbody>
     </table>
     <p style="text-align: justify;"></p>
-    <p style="text-align: justify;"><br></p>
+    <p style="text-align: justify;"><br/></p>
 
     <table border="0" cellspacing="0" cellpadding="0" style="text-align: justify; border-collapse: collapse;">
         <tbody>
         <tr>
             <td width="322" valign="top" style="width: 241.45pt; padding: 0cm 3.5pt;">
                 <p style="text-align: justify;"><b>${nomeFiador}</b></p>
+            </td>
             <td width="322" valign="top" style="width: 241.45pt; padding: 0cm 3.5pt;"></td>
         </tr>
         <tr>
             <td width="322" valign="top" style="width: 241.45pt; padding: 0cm 3.5pt;">
                 <p style="text-align: justify;">FIADOR</p>
+            </td>
             <td width="322" valign="top" style="width: 241.45pt; padding: 0cm 3.5pt;"></td>
         </tr>
         </tbody>
@@ -183,7 +185,7 @@
 
 
     <p style="text-align: justify;"></p>
-    <p style="text-align: justify;"><br></p>
+    <p style="text-align: justify;"><br/></p>
 
     <p style="text-align: justify;">Testemunhas:</p>
     <p style="text-align: justify;"></p>
@@ -200,7 +202,7 @@
         </tbody>
     </table>
     <p style="text-align: justify;"></p>
-    <div style="text-align: justify;"><br>
+    <div style="text-align: justify;"><br/>
     </div>
     <p style="text-align: justify;"></p>
 </div>

@@ -105,7 +105,7 @@
                     <#list template.exportTypeSet as type>
                         <input type="submit"
                                class="dropdown-item"
-                               value="${type.label}"
+                               value="${type.engine.label}"
                                onclick="typeToExport = '${type}'">
                     </#list>
                 </div>
