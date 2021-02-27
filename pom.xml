@@ -34,25 +34,29 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- PDF generator -->
 		<dependency>
-			<!-- ALWAYS required -->
 			<groupId>com.openhtmltopdf</groupId>
 			<artifactId>openhtmltopdf-core</artifactId>
 			<version>${openhtml.version}</version>
 		</dependency>
 
 		<dependency>
-			<!-- Required for PDF output. -->
 			<groupId>com.openhtmltopdf</groupId>
 			<artifactId>openhtmltopdf-pdfbox</artifactId>
 			<version>${openhtml.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>7.5.4</version>
 		</dependency>
 
 		<!-- Dependência responsável por fazer com que o FreeMarker suporte os novos objetos de datas disponíveis no Java 8 -->
