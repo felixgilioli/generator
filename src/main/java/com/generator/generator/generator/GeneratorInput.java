@@ -14,4 +14,17 @@ public class GeneratorInput {
     private String templateId;
     private Map<String, Object> params;
 
+    public Map<String, Object> getParams() {
+        if (this.params == null) {
+            return null;
+        }
+        this.params.keySet()
+                .forEach(k -> {
+                    if (this.params.get(k) == null) {
+                        this.params.replace(k, "");
+                    }
+                });
+
+        return this.params;
+    }
 }
