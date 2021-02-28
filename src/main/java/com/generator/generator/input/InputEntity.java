@@ -2,9 +2,7 @@ package com.generator.generator.input;
 
 import com.generator.generator.converter.BooleanNotNullConverter;
 import com.generator.generator.inputgroup.InputGroupEntity;
-import com.generator.generator.template.TemplateEntity;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -14,6 +12,9 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Table(name = "input")
 public class InputEntity implements Serializable {
 

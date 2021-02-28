@@ -1,34 +1,22 @@
 package com.generator.generator.template;
 
+import com.generator.generator.category.CategoryEntity;
+import com.generator.generator.inputgroup.InputGroupEntity;
+import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderBy;
-import javax.persistence.Table;
-
-import com.generator.generator.inputgroup.InputGroupEntity;
-import org.hibernate.annotations.GenericGenerator;
-
-import com.generator.generator.category.CategoryEntity;
-import com.generator.generator.input.InputEntity;
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "template")
 public class TemplateEntity implements Serializable {
 

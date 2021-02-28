@@ -2,8 +2,7 @@ package com.generator.generator.inputgroup;
 
 import com.generator.generator.input.InputEntity;
 import com.generator.generator.template.TemplateEntity;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -17,6 +16,9 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "input_group")
 public class InputGroupEntity implements Serializable {
 

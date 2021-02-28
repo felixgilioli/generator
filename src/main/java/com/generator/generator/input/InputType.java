@@ -6,6 +6,7 @@ public enum InputType {
     EMAIL("Email"),
     NUMBER("Número"),
     MASK("Máscara"),
+    CALENDAR("Calendário"),
     TEXTAREA("Textarea");
 
     private final String label;

@@ -30,7 +30,7 @@
                                     <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
                                     <input type="text" class="form-control"
                                            id="${item.name}"
-                                           title="${item.title}"
+                                           title="${(item.title)!item.label}"
                                            <#if item.required>required</#if>
                                            name="${item.name}"
                                            placeholder="${(item.placeholder)!}">
@@ -42,7 +42,7 @@
                                     <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
                                     <input type="text" class="form-control"
                                            id="${item.name}"
-                                           title="${item.title}"
+                                           title="${(item.title)!item.label}"
                                            <#if item.required>required</#if>
                                            name="${item.name}"
                                            placeholder="${(item.placeholder)!}">
@@ -55,6 +55,7 @@
                                     <input type="number"
                                            class="form-control"
                                            id="${item.name}"
+                                           title="${(item.title)!item.label}"
                                            name="${item.name}"
                                            <#if item.required>required</#if>
                                            placeholder="${(item.placeholder)!}">
@@ -67,6 +68,7 @@
                                     <input type="email"
                                            class="form-control"
                                            id="${item.name}"
+                                           title="${(item.title)!item.label}"
                                            <#if item.required>required</#if>
                                            name="${item.name}"
                                            placeholder="${(item.placeholder)!}">
@@ -79,6 +81,7 @@
                                     <label for="${item.name}">${item.label}<#if item.required> *</#if></label>
                                     <textarea class="form-control"
                                               id="${item.name}"
+                                              title="${(item.title)!item.label}"
                                               name="${item.name}"
                                               <#if item.required>required</#if>
                                                       placeholder="${(item.placeholder)!}"></textarea>
