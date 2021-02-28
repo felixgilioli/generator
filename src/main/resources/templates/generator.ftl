@@ -8,9 +8,8 @@
 </head>
 <body>
 <header>
-
-        <a href="/"><img src="${path}/img/icon-back.png" width="40px" alt="Icone de voltar" class="float-left"></a>
-        <h1 class="title">Preencha os dados abaixo para baixar seu documento</h1>
+    <a href="/"><img src="${path}/img/icon-back.png" width="40px" alt="Icone de voltar" class="float-left"></a>
+    <h1 class="title">Preencha os dados abaixo para baixar seu documento</h1>
 </header>
 
 <input type="hidden" name="templateId" id="templateId" value="${template.id}">
